@@ -12,11 +12,14 @@ func main() {
   fmt.Printf("length: %d\n", linkedList.Length)
   linkedList.Print()
   linkedList = entities.NewLinkedList("Bruch")
-  fmt.Printf("length: %d\n", linkedList.Length)
+  fmt.Printf("length: %d, %v\n", linkedList.Length, &linkedList)
   linkedList.Print()
   linkedList.Clear()
+  fmt.Printf("length: %d, %v\n", linkedList.Length, &linkedList)
   linkedList.Append("David")
   linkedList.Prepend("Braejan")
+  linkedList.Print()
+  fmt.Printf("length: %d, %v\n", linkedList.Length, &linkedList)
 }
 
 

@@ -55,7 +55,21 @@ func (list *LinkedList) Append (data interface{}) {
 }
 
 func (list *LinkedList) Clear () {
-  list = &LinkedList{}
+  if list.Length == 0 {
+    return
+  }
+  if list.Length == 1 {
+    list.Length = 0
+    list.Head = nil
+    return
+  }
+  currentNode := list.Head
+  for currentNode.Next != nil {
+    aux := currentNode.Next
+    currentNode.Next = nil
+    currentNode = aux
+  }
+  list.Length = 0
 }
 
 func (list *LinkedList) Print () {
