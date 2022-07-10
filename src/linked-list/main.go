@@ -14,6 +14,9 @@ func main() {
   linkedList = entities.NewLinkedList("Bruch")
   fmt.Printf("length: %d\n", linkedList.Length)
   linkedList.Print()
+  linkedList.Clear()
+  linkedList.Append("David")
+  linkedList.Prepend("Braejan")
 }
 
 
